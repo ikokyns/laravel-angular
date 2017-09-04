@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Contact;
+
 
 class ContactsController extends Controller
 {
@@ -13,7 +15,7 @@ class ContactsController extends Controller
      */
     public function index()
     {
-        return 'eeee';
+        return Contact:: all();
     }
 
     /**
@@ -34,7 +36,7 @@ class ContactsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Contact:: create($request->all());
     }
 
     /**

@@ -24,5 +24,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // Route::post('contacts', 'ContactsController@store');
 // Route::put('contacts/{id}', 'ContactsController@update');
 
-Route::resource('contact', 'ContactsController');
-Route::resource('contact', App\Http\Controllers\ContactsController::class);
+Route::resource('contacts', 'ContactsController');
+// Route::resource('contacts', App\Http\Controllers\ContactsController::class);
