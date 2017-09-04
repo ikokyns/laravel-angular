@@ -36,7 +36,7 @@ class ContactsController extends Controller
      */
     public function store(Request $request)
     {
-        return Contact:: create($request->all());
+        return Contact::create($request->all());
     }
 
     /**
@@ -47,7 +47,7 @@ class ContactsController extends Controller
      */
     public function show($id)
     {
-        //
+        return Contact::findOrFail($id);
     }
 
     /**
