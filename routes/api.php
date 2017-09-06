@@ -18,11 +18,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-// Route::get('contacts', 'ContactsController@index');
-// Route::get('contacts/{id}', 'ContactsController@show');
-// Route::delete('contacts/{id}', 'ContactsController@destroy');
-// Route::post('contacts', 'ContactsController@store');
-// Route::put('contacts/{id}', 'ContactsController@update');
+Route::get('contacts', 'ContactsController@index');
+Route::get('contacts/{id}', 'ContactsController@show');
+Route::delete('contacts/{id}', 'ContactsController@destroy');
+Route::post('contacts', 'ContactsController@store');
+Route::put('contacts/{id}', 'ContactsController@update');
 
-Route::resource('contacts', 'ContactsController');
+// Route::resource('contacts', 'ContactsController');
 // Route::resource('contacts', App\Http\Controllers\ContactsController::class);
+
+// header("Access-Control-Allow-Origin: *");
+// header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+// header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
